@@ -1,0 +1,119 @@
+:root {
+    --black: #0a0a0a;
+    --dark-grey: #1a1a1a;
+    --gold: #d4af37;
+    --white: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    background-color: var(--black);
+    color: var(--white);
+    overflow-x: hidden;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem 10%;
+    background: rgba(10, 10, 10, 0.95);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.logo span { color: var(--gold); }
+
+nav ul { display: flex; list-style: none; }
+nav ul li a {
+    color: var(--white);
+    text-decoration: none;
+    margin-left: 2rem;
+    transition: 0.3s;
+}
+
+nav ul li a:hover, .active { color: var(--gold); }
+
+.hero {
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: radial-gradient(circle, #1a1a1a 0%, #0a0a0a 100%);
+}
+
+.gold-text { color: var(--gold); }
+
+.btn-gold {
+    display: inline-block;
+    padding: 1rem 2rem;
+    border: 1px solid var(--gold);
+    color: var(--gold);
+    text-decoration: none;
+    margin-top: 2rem;
+    transition: 0.4s;
+    background: transparent;
+}
+
+.btn-gold:hover {
+    background: var(--gold);
+    color: var(--black);
+    box-shadow: 0 0 20px var(--gold);
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    padding: 5rem 10%;
+}
+
+.service-card {
+    background: var(--dark-grey);
+    padding: 3rem;
+    border-radius: 15px;
+    text-align: center;
+    transition: transform 0.5s;
+    border: 1px solid transparent;
+}
+
+.service-card:hover {
+    transform: translateY(-10px) rotateY(10deg);
+    border-color: var(--gold);
+}
+
+.contact-section { padding: 5rem 10%; text-align: center; }
+.contact-container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 3rem;
+    flex-wrap: wrap;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 500px;
+}
+
+input, textarea {
+    background: var(--dark-grey);
+    border: 1px solid #333;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    color: white;
+}
